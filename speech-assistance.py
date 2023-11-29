@@ -26,12 +26,12 @@ def speak (answer):
 
 def answers (voice_data):
   if "name" in voice_data:
-   speak ("my name is jerry")
+   speak ("my name is Tom")
   if "time" in voice_data:
      speak (ctime())
   if "jerry" in voice_data:
    search = record_audio("what you want to google ?")
-   url = 'https://google.com/search?q='+ search
+   url = 'https://google.com/search?q=' + search
    webbrowser.open(url)
    speak ("this is the data i found " + search)
   if "thankyou" in voice_data:
@@ -39,7 +39,7 @@ def answers (voice_data):
       exit()
 
 
-speak ("How can I help you ?")
+speak ("How can I help you ")
 while 1:
     voice_data = record_audio()
     answers (voice_data)
