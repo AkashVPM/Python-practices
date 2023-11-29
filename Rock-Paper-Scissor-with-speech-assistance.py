@@ -15,7 +15,7 @@ def record_audio( ask = False, timeout = 10):
         except sr.UnknownValueError:
            speak ("sorry i cannot undersatsnd, can you say it again ")
         except sr.RequestError:
-           speak ("sorry i can't find the result , please try again later ")
+           speak ("sorry i can't find the result , please try again")
         return voice_data.lower()
 
 # for read the result
