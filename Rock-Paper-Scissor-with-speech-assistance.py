@@ -2,6 +2,9 @@ import speech_recognition as sr
 import pyttsx3
 import random
 
+player_score = 0
+computer_score = 0
+
 # for speech recognition
 r = sr.Recognizer()
 def record_audio( ask = False, timeout = 10):
@@ -37,8 +40,10 @@ def player (play):
         speak("so, the match is a tie")
     elif (play == "rock" and computer_choice == "paper") or (play == "scissor" and computer_choice == "rock") or (play == "paper" and computer_choice == "scissor"):
         speak("you loose")
+        computer_score = computer_score + 1
     else:
         speak("you win")
+        player_score = player_score + 1
 
 # getting the input from the player in loop 
 
@@ -49,7 +54,11 @@ while True:
     if player_choice in options:
         player(player_choice)
     if "thanks" in player_choice:
-        speak ("you welcome ")
+        speak (f"your score is {player_score} my score is {computer_score} ")
+        speak (", Thanks for playind")
         exit()
     if player_choice not in options:
         speak("sorry")
+
+
+    
