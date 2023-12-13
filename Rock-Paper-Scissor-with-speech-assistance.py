@@ -31,7 +31,7 @@ def speak(answer):
 
 # getting output from the computer
 def player(play):
-    global player_score, computer_score  # Add this line
+    global player_score, computer_score
     option = ["rock", "paper", "scissor"]
     computer_choice = random.choice(option)
     speak(f"you chose {play} and computer chose {computer_choice}")
