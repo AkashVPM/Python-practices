@@ -11,8 +11,10 @@ chosen_word = random.choice(words)
 
 x = words.index(chosen_word)
 
-hint = ["I am a fruit, red in color","I am a fruit, I have 11 brothers",
-         "I am a fruit, yellow in color","I will make you to cry when you kill me, and i make food delicious"]
+hint = ["I am a fruit, red in color",
+        "I am a fruit, I have 11 brothers and sisters",
+        "I am a fruit, yellow in color",
+        "I will make you to cry when you kill me, and i make food delicious"]
 
 print("\n Hint is ",hint[x])
 
@@ -23,27 +25,22 @@ word = []
 
 while (len(choice) != 0 and len(heart) != 0):
       print("\n")
-      
       for i in range(len(choice)):
             print("'_'",end='')
-
       print("\n your have",heart)
       player_choice = str(input("enter the letter: "))
 
       if player_choice not in choice:
             print("oops! you are wrong")
             heart.pop()
-      
       if player_choice in choice:
             print("you are correct, way to go")
             choice.remove(player_choice)
             word.append(player_choice) 
-
       print(word,end='')
 
       if (len(choice) == 0):
             print("\n you won")
-            
       if (len(heart) == 0):
             print("\n you loose")
             
