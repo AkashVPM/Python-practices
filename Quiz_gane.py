@@ -7,7 +7,6 @@ answer = [["A: p ('Hello World')","B: print 'Hello World'","C: printf 'Hello Wor
 ["A: # command","B: // command","C: -- command"]]
 
 for question in range(len(questions)):
-      print(questions[question]["ques"])
-
-for i in answer[question]:
-      print(i)
+      print("\n",questions[question]["ques"])
+      for i in answer[question]:
+            print(i)
