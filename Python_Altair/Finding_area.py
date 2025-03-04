@@ -12,5 +12,4 @@ area = Actuator_body.areas
 # Sum of all triangles 
 Total_area = sum(area)
 
-
 print (f"The total area of all triangles is {Total_area}")
