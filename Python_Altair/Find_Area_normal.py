@@ -10,3 +10,4 @@ for line in Lines:
       if "vertex" in line:
             print(line)
 
+
